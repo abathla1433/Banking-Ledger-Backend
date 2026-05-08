@@ -1,158 +1,83 @@
-🏦 Banking Ledger System
+# 🏦 Banking Ledger System
 
-A production-grade banking backend system built using Node.js, Express.js, and MongoDB.
-This project demonstrates secure financial transaction handling, ledger-based accounting, and backend architecture suitable for real-world banking workflows.
+> A production-grade banking backend system built using Node.js, Express.js, and MongoDB with secure transaction processing, ledger accounting, and idempotent APIs.
 
-📌 Project Overview
+---
 
-The Banking Ledger System is designed to manage users, bank accounts, and financial transactions with a strong focus on:
+## ✨ Features
 
-Data Integrity
-Transaction Consistency
-Security
-Scalability
+- 🔐 JWT Authentication & Authorization
+- 🛡️ Password Hashing using bcrypt
+- 🏦 Bank Account Management
+- 💸 Secure Credit/Debit Transactions
+- 📒 Ledger-Based Accounting System
+- ♻️ Idempotent Transaction Handling
+- 📧 Email Notifications with Nodemailer
+- 🚫 Token Blacklisting for Logout Security
+- ⚙️ RESTful APIs
+- 🌱 Environment Variable Management using dotenv
 
-The system follows a ledger-based accounting architecture, ensuring that every transaction is permanently recorded and traceable, making the ledger the single source of truth for account balances.
+---
 
-🚀 Features
-🔐 User Authentication
-Secure user registration and login
-Password hashing using bcrypt
-JWT-based authentication
-Protected routes using middleware
-🏦 Account Management
-Create and manage bank accounts
-Account status handling:
-Active
-Frozen
-Closed
-Balance tracking
-💸 Transaction Processing
-Credit and debit operations
-Atomic transaction handling
-Transaction validation
-Consistent balance updates
-📒 Ledger System
-Centralized ledger for all financial movements
-Immutable transaction records
-Accurate balance reconciliation
-Full audit trail support
-♻️ Idempotency Handling
-Prevents duplicate transaction processing
-Safe retry mechanism for APIs
-Uses unique idempotency keys
-📧 Notification System
-Email notifications using Nodemailer
-Registration confirmation emails
-Transaction success alerts
-🛡️ Security Features
-JWT token blacklisting for secure logout
-Environment variable management using dotenv
-Authentication middleware
-Protected API endpoints
-🛠️ Tech Stack
-Technology	Purpose
-Node.js	Runtime Environment
-Express.js	Backend Framework
-MongoDB	Database
-Mongoose	ODM
-JWT	Authentication
-bcrypt	Password Hashing
-Nodemailer	Email Services
-dotenv	Environment Configuration
-📂 Project Structure
-Banking-Ledger-System/
+# 📌 Project Overview
+
+The **Banking Ledger System** is designed to simulate core banking operations while maintaining high levels of consistency, traceability, and security.
+
+The project follows a **ledger-first architecture**, where every transaction is recorded in a centralized ledger to ensure accurate balance tracking and complete financial transparency.
+
+This backend system demonstrates concepts commonly used in real-world fintech and banking applications.
+
+---
+
+# 🛠️ Tech Stack
+
+| Technology | Usage |
+|------------|-------|
+| Node.js | Runtime Environment |
+| Express.js | Backend Framework |
+| MongoDB | Database |
+| Mongoose | ODM |
+| JWT | Authentication |
+| bcrypt | Password Encryption |
+| Nodemailer | Email Service |
+| dotenv | Environment Configuration |
+
+---
+
+# 📂 Folder Structure
+
+```bash
+Banking-Ledger-System
 │
-├── controllers/
-├── models/
-├── routes/
-├── middlewares/
-├── services/
-├── utils/
-├── config/
-├── emails/
+├── controllers
+├── middlewares
+├── models
+├── routes
+├── services
+├── utils
+├── config
+│
 ├── app.js
 ├── server.js
 ├── package.json
 └── .env
-⚙️ Getting Started
-📋 Prerequisites
+```
 
-Make sure you have installed:
+# 👨‍💻 Author
 
-Node.js
-MongoDB (Local or Atlas)
-npm
-🔧 Installation & Setup
-1️⃣ Clone the Repository
-git clone <your-github-repo-url>
-cd Banking-Ledger-System
-2️⃣ Install Dependencies
-npm install
-3️⃣ Configure Environment Variables
+### Ansh Bathla
 
-Create a .env file in the root directory.
+Backend Developer • Node.js Enthusiast
 
-PORT=5000
+---
 
-MONGO_URI=your_mongodb_connection_string
+# ⭐ Support
 
-JWT_SECRET=your_jwt_secret
+If you liked this project, consider giving it a ⭐ on GitHub.
 
-EMAIL_USER=your_email
-EMAIL_PASS=your_email_password
-4️⃣ Start the Server
-Development Mode
-npm run dev
-Production Mode
-npm start
-🧪 API Testing
+---
 
-Use Postman or any API testing tool.
+# 📜 License
 
-🔑 Authentication APIs
-Register User
-POST /api/auth/register
-Login User
-POST /api/auth/login
+This project is licensed under the MIT License.
 
-Returns a JWT authentication token.
-
-💳 Transaction APIs
-Transfer Money
-POST /api/transaction/transfer
-Required Headers
-Authorization: Bearer <token>
-Idempotency-Key: unique_key
-💰 Account APIs
-Get Account Balance
-GET /api/account/balance
-🔄 Transaction Flow
-User Request
-    ↓
-Authentication Middleware
-    ↓
-Transaction Validation
-    ↓
-Ledger Entry Creation
-    ↓
-Balance Update
-    ↓
-Transaction Confirmation
-    ↓
-Email Notification
-🛡️ Security Measures
-Password hashing with bcrypt
-JWT authentication
-Protected routes
-Token blacklisting
-Environment variable protection
-Idempotent transaction APIs
-📈 Future Improvements
-Role-based access control (RBAC)
-Rate limiting
-Redis caching
-Docker containerization
-CI/CD integration
-Unit & integration testing
-Microservices architecture
