@@ -24,4 +24,8 @@ app.use("/api/transactions",transactionRouter);
 
 connectDB();
 
+app.get("/",(req,res)=>{
+    res.send("Ledger service is up and running")
+})
+
 module.exports=app;
